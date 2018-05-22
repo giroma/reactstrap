@@ -26,6 +26,7 @@ function CustomInput(props) {
     cssModule,
     children,
     bsSize,
+    onClick,
     ...attributes
   } = props;
 
@@ -74,6 +75,7 @@ function CustomInput(props) {
         className={classNames(validationClassNames, mapToCssModules('custom-control-input', cssModule))}
       />
       <label className={mapToCssModules('custom-control-label', cssModule)} htmlFor={attributes.id}>{label}</label>
+      {onClick}
       {children}
     </div>
   );
